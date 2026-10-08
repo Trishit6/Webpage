@@ -1,0 +1,167 @@
+:root {
+  color-scheme: dark;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #e5e7eb;
+  background: #09090f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background: radial-gradient(ellipse at 50% 0%, #131024 0%, #09090f 60%);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-canvas {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  pointer-events: none;
+  padding: 0 1.5rem;
+}
+
+.hero-overlay h1 {
+  font-size: clamp(3rem, 10vw, 7rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  background: linear-gradient(120deg, #a78bfa, #f0abfc 50%, #67e8f9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 80px rgba(139, 92, 246, 0.35);
+}
+
+.hero-overlay p {
+  margin-top: 1rem;
+  font-size: clamp(1rem, 2.5vw, 1.35rem);
+  color: #9ca3af;
+  max-width: 36rem;
+}
+
+/* Pointer events pass through the overlay except the button */
+.hero-overlay .cta {
+  pointer-events: auto;
+}
+
+.cta {
+  margin-top: 2.5rem;
+  display: inline-block;
+  padding: 0.85rem 2.2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(167, 139, 250, 0.5);
+  background: rgba(139, 92, 246, 0.12);
+  backdrop-filter: blur(8px);
+  color: #e9d5ff;
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ---------- Features ---------- */
+.features {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 7rem 1.5rem 4rem;
+}
+
+.features h2 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3.5rem;
+  letter-spacing: -0.02em;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  position: relative;
+  padding: 1.75rem;
+  border-radius: 1.1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: background 0.3s;
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.card .dot {
+  position: absolute;
+  top: 1.75rem;
+  right: 1.5rem;
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 50%;
+  box-shadow: 0 0 14px currentColor;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+  color: #fff;
+}
+
+.card p {
+  color: #9ca3af;
+  font-size: 0.95rem;
+}
+
+/* ---------- Statement ---------- */
+.statement {
+  padding: 8rem 1.5rem;
+  text-align: center;
+}
+
+.statement blockquote {
+  font-size: clamp(1.8rem, 5vw, 3.2rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: linear-gradient(90deg, #67e8f9, #a78bfa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  padding: 2.5rem 1.5rem 3rem;
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
